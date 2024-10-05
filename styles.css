@@ -1,0 +1,158 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.profile-card {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    width: 800px; /* Larger width for desktop */
+    transition: transform 0.4s ease, box-shadow 0.4s ease, border 0.4s ease;
+}
+
+.profile-card:hover {
+    transform: scale(1.05);
+    border: 1px solid rgba(128, 0, 128, 0.3);
+    box-shadow: 0 0 30px rgba(128, 0, 128, 0.4);
+}
+
+.profile-details {
+    flex: 1;
+    padding-right: 30px;  /* Added more padding to create space on the right side */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: left;  /* Left-align text on desktop */
+}
+
+.profile-image {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 6px solid transparent;
+    margin-left: 30px;  /* Create space between left and right sections */
+    transition: box-shadow 0.6s ease, border 0.6s ease;
+}
+
+.profile-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-image:hover {
+    border: 1px solid rgba(128, 0, 128, 0.6);
+    box-shadow: 0 0 30px rgba(128, 0, 128, 0.6), 0 0 60px rgba(128, 0, 128, 0.4);
+}
+
+.name {
+    font-size: 28px;
+    margin: 10px 0 5px;
+    color: #000;
+}
+
+.title {
+    font-size: 12px;
+    margin: 5px 0 15px;
+    color: #800080;
+}
+
+.bio {
+    font-size: 15px;
+    margin: 15px 0 20px;
+    color: #333;
+    text-align: justify;
+    max-width: 100%;
+}
+
+.contact-btn {
+    border: none;
+    padding: 10px 15px;  /* Adjust the padding to make the button more compact */
+    border-radius: 25px;  /* Rounded edges for a more button-like shape */
+    background: linear-gradient(to right, #800080, #000);
+    color: #fff;
+    font-size: 14px;  /* Reduce font size */
+    cursor: pointer;
+    width: 150px;  /* Set width similar to the button you pointed out */
+    height: 40px;  /* Adjust height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background 0.6s ease, transform 0.4s ease;
+}
+
+.contact-btn:hover {
+    background: linear-gradient(to right, #000, #800080);
+    transform: scale(1.1);  /* Slight hover effect */
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-start; /* Left align on desktop */
+    margin-top: 20px;
+}
+
+.social-link {
+    margin-right: 15px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #f4f4f4;
+    color: #000;
+    font-size: 15px;
+    text-decoration: none;
+    border: 1px solid #ddd;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-link:hover {
+    background-color: #800080;
+    color: #fff;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+    .profile-card {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center; /* Center align in mobile view */
+        text-align: center; /* Center align text and button */
+        width: 90%;
+    }
+
+    .profile-image {
+        order: -1; /* Move image to the top */
+        margin-bottom: 20px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .bio {
+        text-align: center; /* Center-align bio */
+    }
+
+    .social-links {
+        justify-content: center; /* Center social icons */
+        margin-top: 10px;
+    }
+
+    .contact-btn {
+        width: 100%;  /* Ensuring compact button in mobile view */
+    }
+}
