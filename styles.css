@@ -82,13 +82,13 @@ body {
 .contact-btn {
     border: none;
     padding: 10px 15px;  /* Adjust the padding to make the button more compact */
-    border-radius: 25px;  /* Rounded edges for a more button-like shape */
+    border-radius: 25px;
     background: linear-gradient(to right, #800080, #000);
     color: #fff;
-    font-size: 14px;  /* Reduce font size */
+    font-size: 14px;
     cursor: pointer;
-    width: 150px;  /* Set width similar to the button you pointed out */
-    height: 40px;  /* Adjust height */
+    width: 150px;  /* Fixed width across all views */
+    height: 40px;  /* Fixed height across all views */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -97,7 +97,7 @@ body {
 
 .contact-btn:hover {
     background: linear-gradient(to right, #000, #800080);
-    transform: scale(1.1);  /* Slight hover effect */
+    transform: scale(1.1);
 }
 
 .social-links {
@@ -107,9 +107,9 @@ body {
 }
 
 .social-link {
-    margin-right: 15px;
-    width: 30px;
-    height: 30px;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -131,28 +131,34 @@ body {
 @media (max-width: 768px) {
     .profile-card {
         flex-direction: column; /* Stack elements vertically */
-        align-items: center; /* Center align in mobile view */
-        text-align: center; /* Center align text and button */
+        align-items: center;
+        text-align: center;
         width: 90%;
     }
 
     .profile-image {
-        order: -1; /* Move image to the top */
+        order: -1;
         margin-bottom: 20px;
         width: 200px;
         height: 200px;
     }
 
+    .profile-details {
+        text-align: center;
+        padding-right: 0;
+    }
+
     .bio {
-        text-align: center; /* Center-align bio */
+        text-align: center;
+        max-width: 100%;
     }
 
     .social-links {
-        justify-content: center; /* Center social icons */
+        justify-content: center;
         margin-top: 10px;
     }
 
     .contact-btn {
-        width: 100%;  /* Ensuring compact button in mobile view */
+        margin: 0 auto;  /* Center the button on mobile and tablet views */
     }
 }
